@@ -1,0 +1,28 @@
+{
+  "name": "mocking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --headed",
+    "mock": "playwright test tests/specs/mocking/incentive.spec.ts --headed",
+    "mock:dev": "set ENV=dev && npm run mock",
+    "mock:stg": "set ENV=stg && npm run mock",
+    "login": "playwright test tests/specs/login/login.spec.ts --headed",
+    "login:dev": "set ENV=dev && npm run login",    
+    "login:stg": "set ENV=stg && npm run login",
+    "sanity": "playwright test --headed --grep @sanity",
+    "regression": "playwright test --headed --grep @regression"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.4.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
