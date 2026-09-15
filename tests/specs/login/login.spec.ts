@@ -4,7 +4,7 @@ import { variable } from '../../../resources/variables';
 
 let loginController: LoginController;
 
-test.describe.configure({ mode: 'parallel' });
+test.describe.configure({ mode: 'serial' });
 
 test.describe('Login Test', () => {
     test.beforeEach(async ({ page }) => {
